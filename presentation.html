@@ -292,7 +292,7 @@ Long before I joined (early years, mid 2000s)
 
 --
 
-* A single server sat in an office somewhere in Stellenbosch
+* A single server sat in an office somewhere in Stellenbosch (South Africa, Western Cape)
 
 ???
 
@@ -338,9 +338,15 @@ also added daemon servers
 
 * Autoscaling (Web and Daemon servers)
 
+--
+
+* We handle payments and reconciliation for the rental industry
+
+--
+
  * Quietest case: c. 20 servers to deploy code to
 
- * Busiest case: *at least* 100 servers to deploy code to
+ * Busiest case (start/end of month): *at least* 100 servers to deploy code to
 
  * Spread across 4 different AWS regions
 
@@ -504,7 +510,15 @@ third parties? difficult, need emulators, etc
 
 --
 
-* How close does it represent PROD?
+* How close does it represent PROD architecture?
+
+???
+
+a single box and filesystem is not like PROD
+
+firewalls?
+
+etc?
 
 --
 
@@ -602,6 +616,10 @@ A CI suite falsely passing is obviously bad
 
 * AWS
 
+???
+
+We even use AWS to autoscale our CI server, which is neat
+
 --
 
 * Monitoring
@@ -696,6 +714,7 @@ internal accounts / test users clearly
 
  * Internal tools breaking for a short time isn't critical
  * At least not immediately, that is to say no customer impact
+ * And you *probably* don't have to fix them out of office hours
 
 ???
 
